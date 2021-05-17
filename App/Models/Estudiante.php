@@ -56,7 +56,7 @@ class Estudiante {
       INNER JOIN ciudad as c on c.id_ciudad=e.id_ciudad
       INNER JOIN departamento as d on d.id_departamento=c.id_departamento";
     $result = mysqli_query($connection, $query);
-
+    //var_dump(mysqli_fetch_array($result));
     if (!$result) {
       die('Error de Lectura'. mysqli_error($connection));
     }
